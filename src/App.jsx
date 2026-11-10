@@ -2,6 +2,8 @@
 import "./App.css";
 
 function App() {
+  const baseUrl = import.meta.env.BASE_URL;
+
   const linkedinURL =
     "https://www.linkedin.com/in/kanishka-sinha-0b204a375/";
 
@@ -135,9 +137,12 @@ function App() {
               Contact Me
             </a>
 
+            {/* UPDATED RESUME PATH */}
             <a
-              href="/resume/resume.pdf"
+              href={`${baseUrl}resume/resume.pdf`}
               download="Kanishka-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="secondary-btn resume-btn"
             >
               ↓ Download Resume
@@ -173,8 +178,9 @@ function App() {
           <div className="image-glow"></div>
 
           <div className="profile-frame">
+            {/* UPDATED PROFILE IMAGE PATH */}
             <img
-              src="/images/profile.jpg"
+              src={`${baseUrl}images/profile.jpg`}
               alt="Kanishka"
               className="profile-photo"
             />
